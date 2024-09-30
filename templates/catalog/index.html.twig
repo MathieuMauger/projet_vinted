@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CatalogController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1> {{ controller_name }} ✅</h1>
+
+    {% for item in articles %}
+     {{ item.titre }}
+     <img src={{ item.image}}/>
+     {{ item.contenu }}
+     {{ item.fav }}
+    
+{% else %}
+    No users have been found.
+{% endfor %}
+        
+    <h1> TTC :{{ tva + price }} </h1>
+
+</div>
+{% endblock %}
