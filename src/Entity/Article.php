@@ -20,13 +20,13 @@ class Article
     private ?string $contenu = null;
  
     #[ORM\Column(type:"string", length:255)]
-    private ?string $image = null;
+    private ?string $url_image = null;
 
     #[ORM\Column(type:"integer", length:255)]
     private ?string $fav = null;
 
     #[ORM\Column(type:"integer", length:255)]
-    private ?string $ht = null;
+    private ?string $prixht = null;
 
     #[ORM\Column(type:"integer", length:255)]
     private ?string $tva = null;
@@ -65,18 +65,18 @@ class Article
 
     public function setContenu(?string $contenu): self{
 
-        $this->tva = $contenu;
+        $this->contenu = $contenu;
         return $this;
     }
 
-    public function getImage(): ?string{
+    public function geturlimage(): ?string{
 
-        return $this->image;
+        return $this->url_image;
     }
 
-    public function setImage(?string $image): self{
+    public function seturlimage(?string $url_image): self{
 
-        $this->image = $image;
+        $this->url_image = $url_image;
         return $this;
 
     }
@@ -91,14 +91,14 @@ class Article
         return $this;
     }
 
-    public function getHt(): ?string{
+    public function getprixht(): ?string{
 
-        return $this->ht;
+        return $this->prixht;
     }
 
-    public function setHt(?string $ht): self{
+    public function setprixht(?string $prixht): self{
 
-        $this->ht = $ht;
+        $this->prixht = $prixht;
         return $this;
     }
 

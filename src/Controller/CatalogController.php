@@ -24,7 +24,7 @@ class CatalogController extends AbstractController
                 'contenu' => 'haut blanc basique stradivarius S, comme neuf T-shirt cintré',
                 'image' => 'https://picsum.photos/200',
                 'fav' => 4,
-                'prix' => 15,
+                'prixht' => 15,
                 'tva' => 20,
             ],
             [
@@ -32,15 +32,15 @@ class CatalogController extends AbstractController
                 'contenu' => 'Veste kaki légère manche longues zara Bon état',
                 'image' => 'https://picsum.photos/200',
                 'fav' => 2,
-                'prix' => 10,
+                'prixht' => 10,
                 'tva' => 20,
             ]
         ];
 
         foreach ($items as $item) {
 
-            $product_price = $item['prix'];
-            $prix_tot =  $this->calculService->calculTVA($item['prix'], $item['tva']);
+            $product_price = $item['prixht'];
+            $prix_tot =  $this->calculService->calculTVA($item['prixht'], $item['tva']);
         }
 
 
